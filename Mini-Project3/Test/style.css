@@ -1,0 +1,168 @@
+.card {
+  display: block;
+  margin: auto;
+  flex-direction: row;
+  width: 15rem;
+  border: 1px solid #d0d0d0;
+}
+
+.text {
+  background-color: #ffffff;
+  color: rgb(255, 125, 4);
+  font-size: 16px;
+  padding: 16px 32px;
+  border: 2px solid rgb(255, 125, 4);
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  margin: auto;
+  width: fit-content;
+  transform: translate(0%, -450%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-container:hover .middle {
+  opacity: 1;
+}
+
+.card:hover {
+  opacity: 0.3;
+  background-color: rgba(0, 204, 255, 0.507);
+}
+
+.picture {
+  width: 15rem;
+  vertical-align: middle;
+}
+
+h1 {
+  text-align: center;
+  color: #ff5301;
+}
+
+h2,
+p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+p.author {
+  display: inline-block;
+  margin-top: 0px;
+}
+
+p.datetime {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.form-contact {
+  display: block;
+}
+
+form {
+  display: block;
+  width: 100%;
+}
+
+.submit {
+  background-color: #ff6347;
+  height: 30px;
+
+  width: 100px;
+  border: 0;
+  font-weight: 600;
+  -webkit-appearance: none;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+textarea {
+  height: 80px;
+}
+
+input {
+  width: 80%;
+  height: 30px;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .card-container {
+    flex: 1;
+  }
+
+  form .name-input-block,
+  form .phone-input-block {
+    display: inline-block;
+    width: 48%;
+  }
+
+  input,
+  textarea {
+    width: -webkit-fill-available;
+    height: 30px;
+  }
+
+  textarea {
+    height: 90px;
+  }
+
+  .name-input-block {
+    margin-right: 3%;
+  }
+
+  .form-contact {
+    display: block;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    align-items: center;
+    padding-left: 0rem;
+    padding-right: 0;
+    flex-direction: column;
+  }
+
+  .card-container {
+    flex: 1;
+    margin-top: 10px;
+  }
+
+  form .name-input-block,
+  form .phone-input-block {
+    display: block;
+  }
+
+  .form-contact {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  form .name-input-block,
+  form .phone-input-block {
+    display: block;
+    width: 100%;
+  }
+}
