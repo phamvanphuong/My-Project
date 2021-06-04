@@ -1,0 +1,140 @@
+/* .container {
+    background: red;
+    max-width: 960px;
+    max-height: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+}
+.item {
+    background: blue;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+} */
+/* flexbox */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  width: 250px;
+}
+.wrap-layout {
+  background-color: white;
+  margin-top: 36px;
+  padding: 12px 0 32px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+}
+.wrap-layout_item {
+  width: 148px;
+  height: 90px;
+  color: white;
+  text-align: center;
+  line-height: 90px;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 20px;
+  background-color: orangered;
+}
+.chart-layout {
+  margin: 36px auto 0 auto;
+  padding: 32px 0;
+  height: 320px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart-layout__item {
+  align-self: flex-end;
+  width: 60px;
+  color: #fff;
+  text-align: center;
+  height: var(--percent);
+  background-color: #ef5122;
+  animation: growth ease-in 0.5s;
+}
+
+@keyframes growth {
+  from {
+    opacity: 0;
+    height: calc(var(--percent) - 50%);
+  }
+  to {
+    opacity: 1;
+    height: var(--percent);
+  }
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+
+  border-bottom: 50px solid black;
+  margin: auto;
+}
+
+/* .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  
+    border-top: 20px solid #f00;
+  }
+   */
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-left: 60px solid green;
+  /* align-self: center; */
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* .arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  
+    border-right:10px solid blue;
+  } */
+/* .container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .item {
+    flex-grow: 1;
+    height: 100px;
+  }
+  
+  .item + .item {
+    margin-left: 2%;
+  } */
+.container {
+  display: flex;
+}
+
+.item {
+  height: 100px;
+  width: 100px; /* A fixed width as the default */
+}
+
+.item-center {
+  flex-grow: 1; /* Set the middle element to grow and stretch */
+}
+
+.item + .item {
+  margin-left: 2%;
+}

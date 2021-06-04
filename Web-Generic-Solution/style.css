@@ -1,0 +1,187 @@
+.logo-brand {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8rem !important;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.navbar-light .navbar-brand {
+    color: #498ff7;
+}
+
+.slogan {
+    display: block;
+    text-decoration: none;
+    color: #498ff7;
+}
+
+.searchbox {
+    border-radius: 20px;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg,
+ .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    padding: 0 5.5rem;
+}
+
+
+.introduction-bigtext {
+    display: block;
+    color: white;
+    text-align: center;
+    width: -webkit-fill-available;
+    height: auto;
+    font-size: 2.5em;
+}
+
+.cover-image {
+    display: flex;
+    background: #212529;
+    width: -webkit-fill-available;
+    height: 550px;
+    border-radius: 15px;
+    margin: 20px 10px;
+}
+
+.cover-description {
+    color: white;
+}
+
+.cover-block {
+    justify-content: center;
+    margin: auto;
+}
+
+.extra-image {
+    position: relative;
+    height: 200px;
+    width: 500px;
+    background: #212529;
+    margin: 0 auto;
+    bottom: 100px;
+    border-radius: 10px;
+}
+
+.first-tag {
+    width: -webkit-fill-available;
+    height: fit-content;
+}
+
+.new-block {    
+    background: #eeeeee;
+    width: -webkit-fill-available;
+    margin: 200px 0 0;
+    padding: 0 100px 100px;
+}
+
+.card {
+    display: block;
+    margin: 5px;
+}
+
+.list-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.horizontal-menu {
+    overflow: auto;
+    white-space: normal;
+}
+
+.title-block {
+    border: 2px solid #24b8ff;
+    width: fit-content;
+    padding: 10px 100px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #24b8ff;
+    background: white;
+    bottom: 30px;
+    position: relative;        
+    margin: auto;
+}
+
+.list-news-container {
+    display: flex;
+    justify-content: center;
+}
+
+.list-card-item {
+    border: none;
+}
+
+.new-list-block {
+    padding: 0 0 100px;
+}
+
+.picture-container {
+
+}
+
+.container1 {
+    border-radius: 15px;
+    height: 300px;
+    width: -webkit-fill-available;
+    background: #212529;
+    margin: 60px;
+}
+
+.sum-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    /* flex-wrap: wrap; */
+    width: -webkit-fill-available;
+    background: white;
+    height: 300px;
+}
+
+.sub-container {
+    background: #212529;
+    height: 260px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+.help {
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+}
+
+.btn1 {
+    display: block;
+    border-radius: 50px;
+    padding: 10px 100px;
+    border: 2px solid #24b8ff;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #24b8ff;
+    height: 200px;
+    padding: 10px 60px;
+}
+
+.ending {
+    color: white;
+}
+
+
+.logo {
+    width: fit-content;
+    margin: 0px;        
+    display: inline-block;
+}
+.partner-logo {    
+    width: 150px;
+    float: right;    
+}
+
+.copyright {
+    text-align: end;
+    bottom: 0;
+    z-index: 10;
+    color: white;
+}

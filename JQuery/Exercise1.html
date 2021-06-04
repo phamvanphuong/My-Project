@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <div>
+          <label>Nhập 1 số vào ô bên dưới</label>
+          <br>
+          <input type="text" id="textboxTxb" placeholder="Nhập số">
+        </div>
+        <button type="button" id="run-button">Thực hiện</button>
+    </form>
+    <p id = "result"></p>
+    <script>
+        $(document).ready(function(){
+            $("#run-button").click(function(){
+                var resultValue = "";
+                var sum = 0;
+                var number = $("#textboxTxb").val();
+                for(var checkNumber = 0; checkNumber <= number; checkNumber++){
+                    if(checkNumber %2 == 0){
+                        resultValue += checkNumber +" ,";
+                        sum +=checkNumber;
+                    }
+                }
+                $("#result").text("Các số chẵn là : " + resultValue + " Tổng là : " + sum);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id = "result">Result</p>
+    <script>
+        $(document).ready(function(){
+            $.getJSON('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200&fbclid=IwAR0hQcnnLerwDnHxyqUiNI4fk-NlO5sOW2Q1KaLOoLHofLpt_E8LfIdUAQ8', 
+            function (data) {
+                console.log(data);
+                var result = "";
+                var name = "";
+                var url ="";
+                for(var index = 0 ; index < data.results.length; index++){
+                    name = (data.results[index].name);
+                    url = data.results[index].url;
+                    result += "Name : " + name +'<br>' + "URL : " + url + "<br>----------------------------<br>";
+                }
+                $("#result").html(result);
+            });
+        });
+    </script>
+</body>
+</html>

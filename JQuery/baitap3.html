@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        class Character{
+            constructor(name, url){
+                this.name = name;
+                this.url = url;
+            }
+        }
+        $(document).ready(function(){
+            var tempData = new Array();
+            $.getJSON('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200&fbclid=IwAR0hQcnnLerwDnHxyqUiNI4fk-NlO5sOW2Q1KaLOoLHofLpt_E8LfIdUAQ8', 
+            function (data) {
+                console.log(data.results);
+                var result = "";
+                for(var index = 0 ; index < data.results.length; index++){
+                    var character = new Character(data.results[index].name, 
+                                                    data.results[index].url);
+                    result += "Name : " + character.name +'<br>' + "URL : " + character.url; 
+                                "<br>----------------------------<br>";
+                    
+                }
+                $("#result").html(result);
+            });
+            $("#button").click(function searchPokemon(){
+                var searchInput = $("#inputTextboxTxb").val();
+                for(var index = 0 ; index < tempData.length; index++){
+                    if(tempData[index].name == searchInput){
+                        $("#result").html("Kết quả là : <br> Thông tin đối tượng : <br> + Name : "+tempData[index].name+"<br> + URL : "+tempData[index].url);
+                        break;
+                    }
+                    else $("#result").html("Không tìm thấy đối tượng : ");
+                    console.log(searchInput);
+                }
+            });
+    });
+</script>
+<style>
+    #button {
+        background-color: palevioletred;
+    }
+    #inputTextboxTxb {
+        background-color: #89CFF0;
+    }
+</style>
+</head>
+<body>
+    <div>
+      <label>Tìm kiếm đối tượng</label>
+      <input type="text" class="form-control" name="" id="inputTextboxTxb" placeholder="Nhập tên" value="">
+      <button type="button" name="" id="button">OK</button>
+    </div>
+    <p id = "result">Kết quả</p>
+</body>
+</html>
